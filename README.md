@@ -31,6 +31,8 @@
 ```bash
 $ npm install
 ```
+## Create the .env file 
+and set PORT={your port}
 
 ## Compile and run the project
 

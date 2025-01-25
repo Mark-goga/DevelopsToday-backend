@@ -12,7 +12,12 @@ export abstract class AbstractHttpService {
 	}
 
 	async post<T>(url: string, body: any): Promise<T> {
+		try {
+
 		const response = await lastValueFrom(this.httpService.post<T>(url, body));
 		return response.data;
+		}catch (error) {
+			console.log('feact' , error);
+		}
 	}
 }
