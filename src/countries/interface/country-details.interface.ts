@@ -1,3 +1,7 @@
+export interface Country {
+	countryCode: string;
+	name: string;
+}
 export interface CountryInfo {
 	commonName: string;
 	officialName: string;
@@ -14,13 +18,24 @@ export interface BorderCountry {
 	borders: null;
 }
 
-export interface PopulationData {
+interface PopulationCounts {
 	year: number;
 	value: number;
 }
 
+interface PopulationData {
+	country: string;
+	code: string;
+	iso3: string;
+	populationCounts: PopulationCounts[];
+}
+
+export interface PopulationResponse {
+	data: PopulationData;
+}
+
 export interface CountryDetailsResponse {
 	countryInfo: CountryInfo;
-	population: PopulationData[];
+	population: PopulationCounts[];
 	flag: string;
 }

@@ -1,4 +1,1 @@
-export class Country {
-	countryCode: string;
-	name: string;
-}
+export class Country {}
