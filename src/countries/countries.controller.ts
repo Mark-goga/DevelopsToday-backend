@@ -23,9 +23,9 @@ export class CountriesController {
     return this.countriesService.findAll(pageNumber, perPageNumber);
   }
 
-  @Get(':id')
-  findOne(@Param('id') id: string) {
-    return this.countriesService.findOne(+id);
+  @Get(':code')
+  getCountryDetails(@Param('code') code: string) {
+    return this.countriesService.getCountryDetails(code);
   }
 
   @Patch(':id')
